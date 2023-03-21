@@ -11,10 +11,38 @@
 </head>
 
 <body class="dracula">
-    <div>
-        <a href="/index.html" name="topo"><button class="dracula btn-nav btn-home">⌂</button></a>
-        <br>
+    <div class="retorno">
+        <a href="/index.html" name="topo"><button class="dracula btn-nav btn-home">⌂</button></a> <br>
     </div>
+
+    <div class="formulario">
+
+        <h1>Informações</h1>
+        <hr> <br>
+
+        <form>
+            <label for="nome">Nome: </label>
+            <input class="dracula" type="text" name="nome" id="t-nome">
+            <br>
+
+            <label for="radios-generio">Gênero:</label>
+            <div id="radios-generio">
+                <input type="radio" name="genero" id="r-g-masc">
+                <label for="r-g-masc">Masculino</label> <br>
+                <input type="radio" name="genero" id="r-g-fem">
+                <label for="r-g-masc">Feminino</label> <br>
+                <input type="radio" name="genero" id="r-g-outro">
+                <label for="r-g-masc">Outro</label> <br>
+            </div> <br>
+
+            <input type="checkbox" name="casado" id="cb-casado">
+            <label for="casado">Casado/a?</label> <br>
+
+            <input class="button dracula" type="submit" name="submit-info" id="submit-btn" value="Enviar">
+
+        </form>
+    </div>
+
 </body>
 
 </html>
