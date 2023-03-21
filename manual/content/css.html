@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Introdução a CSS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Um manual explicando os básicos de CSS.">
+    <meta name="keywords" content="web,html,css,javascript,www,webdev,framework,manual,ensino">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="shortcut icon" href="/resources/media/image/icon/045-dracula.svg" type="image/x-icon">
+</head>
+
+<body class="dracula">
+    <div>
+        <a href="../index.html" name="topo"><button class="dracula btn-nav btn-home">⌂</button></a>
+        <br>
+    </div>
+    <div class="conteudo">
+
+        <figure class="imagem-topo">
+            <img src="../resources/media/image/css.png" alt="Logo do CSS" title="CSS" height="400px">
+            <figcaption>Cascading Style Sheets.</figcaption>
+        </figure>
+
+        <h1>CSS</h1>
+
+        <hr>
+
+        <h2>Básicos</h2>
+
+        <p>
+            A linguagem de <em>Folhas de Estilo em Cascata</em> é um sistema de introduzir estilos avançados em HTML de
+            forma hierárquica. Um exemplo:
+        </p>
+
+        <pre>
+            <code>
+                footer {
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    text-align: center;
+                    background-color: #282A36;
+                }
+            </code>
+        </pre>
+
+        <p>
+            Esse bloco controla o estilo da tag <code>footer</code>, que age como o rodapé da página. Cada um dos
+            atributos controla uma característica diferente do rodapé; <code>width</code> controla a largura,
+            <code>background-color</code> controla a cor do fundo, e assim por diante.
+        </p>
+
+        <hr>
+    </div>
+</body>
+
+<footer>
+    <div class="rodape">
+        <a href="html.html"><button class="dracula btn-nav btn-antes">←</button></a>
+        <a href="#topo"><button class="dracula btn-nav btn-home">🠕</button></a>
+        <a href="javascript.html"><button class="dracula btn-nav btn-prox">→</button></a>
+    </div>
+</footer>
+
+</html>
