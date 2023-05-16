@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Formulário</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Atividades de PPW1 do curso de SI do IF Goiano de Urutaí.">
+    <meta name="keywords" content="web,html,css,javascript,www,webdev,framework,manual,ensino,formulários">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3104434a60.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="dracula">
+
+    <div class="retorno">
+        <a href="/" name="topo"><button class="dracula btn"><i class="fa-solid fa-home"></i></button></a> <br>
+    </div>
+
+    <div class="formulario">
+        <hr>
+        <fieldset>
+            <legend style="font-size: 2em;">Informações</legend>
+            <form>
+
+                <label for="nome">Nome: </label>
+                <input class="dracula" type="text" name="nome" id="t-nome">
+                <br>
+
+                <label for="radios-generio">Gênero:</label>
+                <div id="radios-genero">
+                    <input type="radio" name="genero" id="r-g-masc">
+                    <label for="r-g-masc">Masculino</label> <br>
+                    <input type="radio" name="genero" id="r-g-fem">
+                    <label for="r-g-fem">Feminino</label> <br>
+                    <input type="radio" name="genero" id="r-g-outro">
+                    <label for="r-g-outro">Outro</label> <br>
+                </div> <br>
+
+                <input type="checkbox" name="casado" id="cb-casado">
+                <label for="casado">Casado/a?</label> <br>
+
+                <input class="dracula btn" type="submit" name="submit-info" id="submit-btn" value="Enviar">
+
+            </form>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>
