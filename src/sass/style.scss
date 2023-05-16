@@ -1,0 +1,115 @@
+$background: #282a36;
+$foreground: #f8f8f2;
+$gray: #44475a;
+$blue: #6272a4;
+$cyan: #8be9fd;
+$pink: #ff79c6;
+
+.dracula {
+    font-family: "Tex Gyre Adventor", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    background-color: $background;
+    color: $foreground;
+}
+
+body {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $background;
+}
+
+a {
+    &:link {
+        color: $cyan;
+    }
+    &:visited {
+        color: $blue;
+    }
+    &:hover {
+        color: $pink;
+    }
+}
+
+.indice {
+    text-align: center;
+}
+
+.btn {
+    padding: 1.2em;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    color: $foreground;
+    border: none;
+    background-color: $gray;
+
+    &:hover {
+        background-color: $blue;
+        transition-duration: 0s;
+    }
+
+    &:active {
+        background-color: $cyan;
+        color: $background;
+    }
+}
+
+.btn--indice {
+    width: 100%;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.retorno {
+    margin-bottom: 30px;
+}
+
+input {
+    margin: 20px;
+    border: 4px solid $gray;
+}
+
+pre {
+    overflow: scroll;
+    background-color: $gray;
+}
+
+.conteudo {
+    margin-inline: auto;
+    width: min(80%, 70ch);
+}
+
+.imagem-topo {
+    text-align: center;
+    & > img {
+        margin-inline: auto;
+        max-height: 400px;
+    }
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+form > * {
+    font-size: larger;
+}
