@@ -9,14 +9,23 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="icon" href="/Untitled.ico" type="image/x-icon">
     <script src="/scripts/gasolina.js"></script>
+    <script src="https://kit.fontawesome.com/3104434a60.js" crossorigin="anonymous"></script>
+    <script src="/scripts/components.js" type="module"></script>
 </head>
 
-<body>
+<body class="dracula">
+
+    <app-top>
+        <i class="fa-solid fa-home" slot="content"></i>
+    </app-top>
+
     <h1>Calcular combustível</h1>
-    <img src="/assets/images/normal.jpg" alt="combustível" id="imagem">
-    <form name="frdados">
+    <form name="frdados" class="gasolina">
+        <img src="/assets/images/normal.jpg" alt="combustível" id="imagem">
+        <br>
         <input type="text" name="txetanol" size="10" placeholder="Etanol" autofocus onblur="melhor()">
         <input type="text" name="txgasolina" size="10" placeholder="Gasolina" onblur="melhor()">
+        <br>
         <input type="reset" value="Limpar" onclick="limpar()">
     </form>
 </body>

@@ -133,3 +133,12 @@ video {
 form > * {
   font-size: larger;
 }
+
+.gasolina {
+  display: block;
+  padding: 5vw;
+  text-align: center;
+}
+.gasolina > img {
+  max-height: 150px;
+}
