@@ -7,9 +7,14 @@ $pink: #ff79c6;
 
 .dracula {
     font-family: "Tex Gyre Adventor", sans-serif;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1.25rem, 2vh, 2rem);
     background-color: $background;
     color: $foreground;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
@@ -43,8 +48,12 @@ a {
     text-align: center;
 }
 
+.atividades {
+    margin-top: 5em;
+}
+
 .btn {
-    padding: 1.2em;
+    padding: 1em;
     transition-duration: 0.1s;
     cursor: pointer;
     color: $foreground;
