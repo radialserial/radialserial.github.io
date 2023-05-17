@@ -69,10 +69,9 @@ a {
         background-color: $cyan;
         color: $background;
     }
-}
-
-.btn--indice {
-    width: 100%;
+    &-indice {
+        width: 100%;
+    }
 }
 
 .rodape {
