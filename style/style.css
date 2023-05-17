@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Raleway:wght@600&display=swap");
 .dracula {
-  font-family: "Tex Gyre Adventor", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: clamp(1.25rem, 2vh, 2rem);
   background-color: #282a36;
   color: #f8f8f2;
@@ -8,6 +9,24 @@
 html,
 body {
   height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+strong {
+  color: #bd93f9;
+}
+
+em {
+  color: #f1fa8c;
 }
 
 body {
@@ -33,6 +52,9 @@ a:visited {
 }
 a:hover {
   color: #ff79c6;
+}
+a:active {
+  color: #8be9fd;
 }
 
 .indice {

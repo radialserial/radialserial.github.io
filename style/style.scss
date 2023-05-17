@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Raleway:wght@600&display=swap");
+
 $background: #282a36;
 $foreground: #f8f8f2;
 $gray: #44475a;
 $blue: #6272a4;
 $cyan: #8be9fd;
+$green: #50fa7b;
 $pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
 
 .dracula {
-    font-family: "Tex Gyre Adventor", sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-size: clamp(1.25rem, 2vh, 2rem);
     background-color: $background;
     color: $foreground;
@@ -15,6 +21,24 @@ $pink: #ff79c6;
 html,
 body {
     height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+strong {
+    color: $purple;
+}
+
+em {
+    color: $yellow;
 }
 
 body {
@@ -41,6 +65,9 @@ a {
     }
     &:hover {
         color: $pink;
+    }
+    &:active {
+        color: $cyan;
     }
 }
 
