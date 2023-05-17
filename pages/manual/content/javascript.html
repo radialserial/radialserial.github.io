@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="icon" href="/Untitled.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3104434a60.js" crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/components.js"></script>
 </head>
 
 <body class="dracula">
 
-    <div class="retorno">
-        <a href="/" name="topo"><button class="dracula btn"><i class="fa-solid fa-home"></i></button></a> <br>
-    </div>
+    <app-top>
+        <i class="fa-solid fa-home" slot="content"></i>
+    </app-top>
 
     <div class="conteudo">
 
