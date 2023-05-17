@@ -146,6 +146,8 @@ video {
     max-width: 100%;
 }
 
-form > * {
-    font-size: larger;
+form {
+    & > * {
+        font-size: larger;
+    }
 }
