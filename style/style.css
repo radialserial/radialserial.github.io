@@ -113,6 +113,7 @@ pre {
 .conteudo {
   margin-inline: auto;
   width: min(80%, 70ch);
+  margin-bottom: 20%;
 }
 
 .imagem-topo {
