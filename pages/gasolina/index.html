@@ -8,7 +8,23 @@
     <meta name="keywords" content="web,html,css,javascript,www,webdev,framework,manual,ensino">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="icon" href="/Untitled.ico" type="image/x-icon">
-    <script src="/scripts/gasolina.js"></script>
+    <script>
+        var gasolina, etanol
+
+        function melhor() {
+            etanol = parseFloat(frdados.txetanol.value.replace(",", "."))
+            gasolina = parseFloat(frdados.txgasolina.value.replace(",", "."))
+            if (etanol < 0.7 * gasolina) {
+                document.getElementById("imagem").src = "/assets/images/etanol.jpg"
+            } else {
+                document.getElementById("imagem").src = "/assets/images/gasolina.jpg"
+            }
+        }
+
+        function limpar() {
+            document.getElementById("imagem").src = "/assets/images/normal.jpg"
+        }
+    </script>
     <script src="https://kit.fontawesome.com/3104434a60.js" crossorigin="anonymous"></script>
     <script src="/scripts/components.js" type="module"></script>
 </head>

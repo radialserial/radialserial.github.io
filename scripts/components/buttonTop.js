@@ -18,16 +18,3 @@ export class ButtonTop extends HTMLElement {
         shadowRoot.appendChild(clone);
     }
 }
-
-// class DefaultHead extends HTMLElement {
-//     connectedCallback() {
-//         this.innerHTML = `
-//     <meta charset="UTF-8">
-//     <meta name="description" content="Atividades de PPW1 do curso de SI do IF Goiano de Urutaí.">
-//     <meta name="keywords" content="web,html,css,javascript,www,webdev,framework,manual,ensino">
-//     <link rel="stylesheet" href="/style/style.css">
-//     <link rel="icon" href="/Untitled.ico" type="image/x-icon"></link> 
-//         `
-//     }
-//} 
-// }
