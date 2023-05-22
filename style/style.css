@@ -31,7 +31,6 @@ em {
 
 body {
   min-height: 400px;
-  margin-bottom: 100px;
   clear: both;
 }
 
@@ -141,4 +140,32 @@ form > * {
 }
 .gasolina > img {
   max-height: 150px;
+}
+
+.menu-sites {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+}
+.menu-sites > a {
+  font-size: 10em;
+  flex-grow: 1;
+  margin: 0;
+  border: 0;
+  padding-block: 50vh;
+  transition: 0.35s;
+  font-weight: bold;
+  color: #f8f8f2;
+}
+.menu-sites > a:hover {
+  padding-inline: 10%;
+  color: #282a36;
+}
+.menu-sites > #site-normal {
+  background-color: #bd93f9;
+}
+.menu-sites > #site-angular {
+  background-color: #ff79c6;
 }

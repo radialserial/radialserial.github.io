@@ -43,7 +43,6 @@ em {
 
 body {
     min-height: 400px;
-    margin-bottom: 100px;
     clear: both;
 }
 
@@ -158,5 +157,33 @@ form {
     text-align: center;
     & > img {
         max-height: 150px;
+    }
+}
+
+.menu-sites {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    & > a {
+        font-size: 10em;
+        flex-grow: 1;
+        margin: 0;
+        border: 0;
+        padding-block: 50vh;
+        transition: 0.35s;
+        font-weight: bold;
+        color: $foreground;
+        &:hover {
+            padding-inline: 10%;
+            color: $background;
+        }
+    }
+    & > #site-normal {
+        background-color: $purple;
+    }
+    & > #site-angular {
+        background-color: $pink;
     }
 }
