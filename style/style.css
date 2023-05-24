@@ -83,6 +83,19 @@ a:active {
 .btn-indice {
   width: 100%;
 }
+.btn-redondo {
+  border-radius: 100%;
+  padding: 1.5em;
+}
+
+.bg-vermelho {
+  background-color: #ff5555;
+}
+
+.bg-amarelo {
+  background-color: #f1fa8c;
+  color: #282a36;
+}
 
 .rodape {
   display: flex;
@@ -168,4 +181,45 @@ form > * {
 }
 .menu-sites > #site-angular {
   background-color: #ff79c6;
+}
+
+.placar {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 1;
+  gap: 1em;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  .placar {
+    flex-direction: column;
+  }
+}
+.placar > .time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.placar > .time > h2 {
+  margin: 0;
+}
+.placar > .time > .upload-imagem {
+  display: none;
+}
+.placar > .time > .botoes {
+  display: flex;
+  flex-direction: column;
+}
+.placar > .time > .imagem-time {
+  max-height: 200px;
+  max-width: 200px;
+  height: 200px;
+  width: 200px;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border: 3px dotted #282a36;
+  background-size: contain;
 }

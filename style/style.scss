@@ -85,12 +85,12 @@ a {
     color: $foreground;
     border: none;
     background-color: $gray;
+    font-size: inherit;
 
     &:hover {
         background-color: $blue;
         transition-duration: 0s;
     }
-
     &:active {
         background-color: $cyan;
         color: $background;
@@ -98,6 +98,18 @@ a {
     &-indice {
         width: 100%;
     }
+    &-redondo {
+        border-radius: 100%;
+        padding: 1.5em;
+    }
+}
+
+.bg-vermelho {
+    background-color: $red;
+}
+.bg-amarelo {
+    background-color: $yellow;
+    color: $background;
 }
 
 .rodape {
@@ -185,5 +197,44 @@ form {
     }
     & > #site-angular {
         background-color: $pink;
+    }
+}
+
+.placar {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 1;
+    gap: 1em;
+    justify-content: center;
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+    & > .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > h2 {
+            margin: 0;
+        }
+        & > .upload-imagem {
+            display: none;
+        }
+        & > .botoes {
+            display: flex;
+            flex-direction: column;
+        }
+        & > .imagem-time {
+            max-height: 200px;
+            max-width: 200px;
+            height: 200px;
+            width: 200px;
+            margin: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            border: 3px dotted $background;
+            background-size: contain;
+        }
     }
 }

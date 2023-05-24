@@ -3,20 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Teste</title>
-    <script></script>
+    <title>Placar de times</title>
+    <script>
+        function uploadTime1(event) {
+            document.getElementById("imagem-time-1").style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+        }
+        function uploadTime2(event) {
+            document.getElementById("imagem-time-2").style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Atividades de PPW1 do curso de SI do IF Goiano de Urutaí.">
+    <meta name="keywords" content="web,html,css,javascript,www,webdev,framework,manual,ensino">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" href="/Untitled.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3104434a60.js" crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/components.js"></script>
 </head>
 
-<body>
-    <div class="container">
-        <label for="file" id="file-upload">Select an Image</label>
-        <input type="file" name="file-upload" id="file" accepts=".jpg, .jpeg, .png">
+<body class="dracula">
 
-        <div class="preview">
-            <img id="file-preview">
+    <app-top>
+        <i class="fa-solid fa-home" slot="content"></i>
+    </app-top>
+
+    <h1>Placar</h1>
+
+    <div class="placar">
+
+        <div class="time-1 time">
+
+            <img class="imagem-time" id="imagem-time-1" alt=" ">
+            <input type="file" class="upload-imagem" id="upload-imagem-time-1" accept="image/*"
+                onchange="uploadTime1(event)">
+            <label for="upload-imagem-time-1">
+                <i class="btn btn-redondo fa-solid fa-upload"></i>
+            </label>
+
+            <input type="text">
+            <div class="botoes">
+                <button class="btn bg-vermelho">Cartao Amarelo</button>
+                <button class="btn bg-amarelo">Cartao Vermelho</button>
+            </div>
         </div>
-    </div>
 
+        <div class="time-2 time">
+            <img class="imagem-time" id="imagem-time-2" alt=" ">
+            <input type="file" class="upload-imagem" id="upload-imagem-time-2" accept="image/*"
+                onchange="uploadTime2(event)">
+            <label for="upload-imagem-time-2">
+                <i class="btn btn-redondo fa-solid fa-upload"></i>
+            </label>
+
+            <input type="text">
+            <div class="botoes">
+                <button class="btn bg-vermelho">Cartao Amarelo</button>
+                <button class="btn bg-amarelo">Cartao Vermelho</button>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
