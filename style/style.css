@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 .dracula {
   font-family: "Raleway", sans-serif;
-  font-size: clamp(1rem, 2vh, 1.5rem);
+  font-size: clamp(1.25rem, 2vh, 4rem);
   background-color: #282a36;
   color: #f8f8f2;
 }
@@ -254,7 +254,7 @@ input {
 }
 
 .menu {
-  width: 250px;
+  width: 40vw;
   height: 100%;
   position: fixed;
   z-index: 1;
