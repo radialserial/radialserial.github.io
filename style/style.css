@@ -185,6 +185,12 @@ form > * {
   background-color: #ff79c6;
 }
 
+input {
+  border: 0;
+  padding: 1rem;
+  font-size: inherit;
+}
+
 .placar {
   display: flex;
   flex-direction: row;
@@ -202,15 +208,11 @@ form > * {
   flex-direction: column;
   align-items: center;
 }
-.placar > .time > h2 {
-  margin: 0;
-}
 .placar > .time > .upload-imagem {
   display: none;
 }
-.placar > .time > .botoes {
-  display: flex;
-  flex-direction: column;
+.placar > .time > .botoes > * > button {
+  padding-inline: 2em;
 }
 .placar > .time > .imagem-time {
   max-height: 200px;
@@ -222,6 +224,31 @@ form > * {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  border: 3px dotted #282a36;
+  border: 5px dotted #44475a;
   background-size: contain;
+  transition: 0.4s;
+}
+.placar > .time > .input-numero {
+  width: 14ch;
+}
+.placar > .time > .vitorioso {
+  border: 5px solid #50fa7b;
+}
+.placar > .time > .derrotado {
+  border: 5px solid #ff5555;
+}
+.placar > .time > .empatado {
+  border: 5px dotted #44475a;
+}
+.placar > .time > .contadores > .contador {
+  width: 2ch;
+  visibility: hidden;
+}
+.placar > .time > .contadores > .contador.contador-vermelho {
+  background-color: #ff5555;
+  color: #f8f8f2;
+}
+.placar > .time > .contadores > .contador.contador-amarelo {
+  background-color: #f1fa8c;
+  color: #282a36;
 }

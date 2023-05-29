@@ -19,6 +19,103 @@
     <link rel="icon" href="/Untitled.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3104434a60.js" crossorigin="anonymous"></script>
     <script type="module" src="/scripts/components.js"></script>
+    <script>
+        "use strict";
+
+        function comparar(texto) {
+            const pontosTime1 = document.getElementById("pontos-1").value || 0;
+            const pontosTime2 = document.getElementById("pontos-2").value || 0;
+            if (+pontosTime1 > +pontosTime2) {
+                ganhar(1);
+            } else if (+pontosTime1 < +pontosTime2) {
+                ganhar(2);
+            } else {
+                ganhar(0);
+            }
+        }
+
+        function ganhar(time) {
+
+            const imagemDoTime1 = document.getElementById("imagem-time-1");
+            const imagemDoTime2 = document.getElementById("imagem-time-2");
+
+            if (time === 1) {
+                limpar();
+                imagemDoTime1.classList.add("vitorioso");
+                imagemDoTime2.classList.add("derrotado");
+            } else if (time === 2) {
+                limpar();
+                imagemDoTime2.classList.add("vitorioso");
+                imagemDoTime1.classList.add("derrotado");
+            } else {
+                limpar();
+                imagemDoTime2.classList.add("empatado");
+                imagemDoTime1.classList.add("empatado");
+            }
+        }
+
+        function aumentarCartao(cartao, time, valor) {
+            if (time === 1) {
+                if (cartao === "vermelho") {
+                    const cartaoTime = document.getElementById("contador-cartao-vermelho-time-1");
+                    cartaoTime.value = +cartaoTime.value + valor;
+                    if (cartaoTime.value <= 0) {
+                        cartaoTime.style.visibility = "hidden";
+                        cartaoTime.value = 0;
+                    } else if (cartaoTime.value > 0) {
+                        cartaoTime.style.visibility = "visible";
+                    }
+
+                }
+                if (cartao === "amarelo") {
+                    const cartaoTime = document.getElementById("contador-cartao-amarelo-time-1");
+                    cartaoTime.value = +cartaoTime.value + valor;
+                    if (cartaoTime.value <= 0) {
+                        cartaoTime.style.visibility = "hidden";
+                        cartaoTime.value = 0;
+                    } else if (cartaoTime.value > 0) {
+                        cartaoTime.style.visibility = "visible";
+                    }
+                }
+            } else {
+                if (cartao === "vermelho") {
+                    const cartaoTime = document.getElementById("contador-cartao-vermelho-time-2");
+                    cartaoTime.value = +cartaoTime.value + valor;
+                    if (cartaoTime.value <= 0) {
+                        cartaoTime.style.visibility = "hidden";
+                        cartaoTime.value = 0;
+                    } else if (cartaoTime.value > 0) {
+                        cartaoTime.style.visibility = "visible";
+                    }
+
+                }
+                if (cartao === "amarelo") {
+                    const cartaoTime = document.getElementById("contador-cartao-amarelo-time-2");
+                    cartaoTime.value = +cartaoTime.value + valor;
+                    if (cartaoTime.value <= 0) {
+                        cartaoTime.style.visibility = "hidden";
+                        cartaoTime.value = 0;
+                    } else if (cartaoTime.value > 0) {
+                        cartaoTime.style.visibility = "visible";
+                    }
+                }
+            }
+        }
+
+        function limpar() {
+            const imagemDoTime1 = document.getElementById("imagem-time-1");
+            const imagemDoTime2 = document.getElementById("imagem-time-2");
+
+            imagemDoTime1.classList.remove("vitorioso");
+            imagemDoTime1.classList.remove("derrotado");
+            imagemDoTime1.classList.remove("empatado");
+            imagemDoTime2.classList.remove("vitorioso");
+            imagemDoTime2.classList.remove("derrotado");
+            imagemDoTime2.classList.remove("empatado");
+        }
+
+
+    </script>
 </head>
 
 <body class="dracula">
@@ -33,6 +130,11 @@
 
         <div class="time-1 time">
 
+            <div class="contadores">
+                <input class="contador contador-vermelho" id="contador-cartao-vermelho-time-1" type="text" value="0">
+                <input class="contador contador-amarelo" id="contador-cartao-amarelo-time-1" type="text" value="0">
+            </div>
+
             <img class="imagem-time" id="imagem-time-1" alt=" ">
             <input type="file" class="upload-imagem" id="upload-imagem-time-1" accept="image/*"
                 onchange="uploadTime1(event)">
@@ -40,14 +142,32 @@
                 <i class="btn btn-redondo fa-solid fa-upload"></i>
             </label>
 
-            <input type="text">
+            <input id="pontos-1" class="input-numero" type="number" min="0" onblur="comparar()">
             <div class="botoes">
-                <button class="btn bg-vermelho">Cartao Amarelo</button>
-                <button class="btn bg-amarelo">Cartao Vermelho</button>
+                <div class="vermelhos">
+                    <button class="btn bg-vermelho" onclick="aumentarCartao('vermelho', 1, -1)">
+                        <i class="fa-solid fa-minus"></i>
+                    </button><button class="btn bg-vermelho" onclick="aumentarCartao('vermelho', 1, 1)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <div class="amarelos">
+                    <button class="btn bg-amarelo" onclick="aumentarCartao('amarelo', 1, -1)">
+                        <i class="fa-solid fa-minus"></i>
+                    </button><button class="btn bg-amarelo" onclick="aumentarCartao('amarelo', 1, 1)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
         <div class="time-2 time">
+
+            <div class="contadores">
+                <input class="contador contador-vermelho" id="contador-cartao-vermelho-time-2" type="text" value="0">
+                <input class="contador contador-amarelo" id="contador-cartao-amarelo-time-2" type="text" value="0">
+            </div>
+
             <img class="imagem-time" id="imagem-time-2" alt=" ">
             <input type="file" class="upload-imagem" id="upload-imagem-time-2" accept="image/*"
                 onchange="uploadTime2(event)">
@@ -55,12 +175,25 @@
                 <i class="btn btn-redondo fa-solid fa-upload"></i>
             </label>
 
-            <input type="text">
+            <input id="pontos-2" class="input-numero" type="number" min="0" onblur="comparar()">
             <div class="botoes">
-                <button class="btn bg-vermelho">Cartao Amarelo</button>
-                <button class="btn bg-amarelo">Cartao Vermelho</button>
+                <div class="vermelhos">
+                    <button class="btn bg-vermelho" onclick="aumentarCartao('vermelho', 2, -1)">
+                        <i class="fa-solid fa-minus"></i>
+                    </button><button class="btn bg-vermelho" onclick="aumentarCartao('vermelho', 2, 1)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <div class="amarelos">
+                    <button class="btn bg-amarelo" onclick="aumentarCartao('amarelo', 2, -1)">
+                        <i class="fa-solid fa-minus"></i>
+                    </button><button class="btn bg-amarelo" onclick="aumentarCartao('amarelo', 2, 1)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
+
 
     </div>
 </body>

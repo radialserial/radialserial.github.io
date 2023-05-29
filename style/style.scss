@@ -201,6 +201,12 @@ form {
     }
 }
 
+input {
+    border: 0;
+    padding: 1rem;
+    font-size: inherit;
+}
+
 .placar {
     display: flex;
     flex-direction: row;
@@ -214,15 +220,13 @@ form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        & > h2 {
-            margin: 0;
-        }
         & > .upload-imagem {
             display: none;
         }
         & > .botoes {
-            display: flex;
-            flex-direction: column;
+            & > * > button {
+                padding-inline: 2em;
+            }
         }
         & > .imagem-time {
             max-height: 200px;
@@ -234,8 +238,35 @@ form {
             justify-content: space-evenly;
             align-items: center;
             text-align: center;
-            border: 3px dotted $background;
+            border: 5px dotted $gray;
             background-size: contain;
+            transition: 0.4s;
+        }
+        & > .input-numero {
+            width: 14ch;
+        }
+        & > .vitorioso {
+            border: 5px solid $green;
+        }
+        & > .derrotado {
+            border: 5px solid $red;
+        }
+        & > .empatado {
+            border: 5px dotted $gray;
+        }
+        & > .contadores {
+            & > .contador {
+                width: 2ch;
+                visibility: hidden;
+                &.contador-vermelho {
+                    background-color: $red;
+                    color: $foreground;
+                }
+                &.contador-amarelo {
+                    background-color: $yellow;
+                    color: $background;
+                }
+            }
         }
     }
 }
