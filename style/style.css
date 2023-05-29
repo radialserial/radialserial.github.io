@@ -264,6 +264,9 @@ input {
   overflow-x: hidden;
   transition: 0.5s;
 }
+.menu > .submenu {
+  padding-top: 5rem;
+}
 .menu > button {
   margin: 0.5rem;
 }
@@ -275,4 +278,8 @@ input {
     height: auto;
     width: 100%;
   }
+}
+
+.nowrap {
+  white-space: nowrap;
 }

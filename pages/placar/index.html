@@ -122,16 +122,42 @@
 
     <script src="/scripts/menu.js"></script>
 
-    <button class="btn" onclick="expandir()" onblur="colapso()">
+    <button class="btn" onclick="expandir('menu-lado')" onblur="colapso('menu-lado')">
         <i class="fa-solid fa-bars" slot="content"></i>
     </button>
 
     <div id="menu-lado" class="menu escondido">
-        <button class="btn" onclick="colapso()"><i class="fa-solid fa-x"></i></button>
+        <button class="btn" onclick="colapso('menu-lado')">
+            <i class="fa-solid fa-x"></i>
+        </button>
+
         <app-top>
             <i class="fa-solid fa-home" slot="content"></i>
         </app-top>
-        <app-menu></app-menu>
+
+        <button class="btn nowrap btn-indice" onclick="expandir('menu-site')"
+            onblur="colapso('menu-site');colapso('menu-lado')">
+            Conteúdo <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div id="menu-site" class="menu submenu escondido">
+            <button class="btn nowrap btn-indice" onclick="expandir('menu-lado');colapso('menu-site')"
+                onblur="colapso('menu-site');colapso('menu-lado')">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <app-site></app-site>
+        </div>
+
+        <button class="btn nowrap btn-indice" onclick="expandir('menu-atividades')" onblur="colapso('menu-atividades')">
+            Atividades <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div id="menu-atividades" class="menu submenu escondido">
+            <button class="btn nowrap btn-indice" onclick="expandir('menu-lado');colapso('menu-atividades')"
+                onblur="colapso('menu-atividades');colapso('menu-lado')">
+                <i class=" fa-solid fa-chevron-left"></i>
+            </button>
+            <app-menu></app-menu>
+        </div>
     </div>
 
     <h1>Placar</h1>
@@ -203,7 +229,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 </body>
