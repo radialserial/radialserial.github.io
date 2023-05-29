@@ -120,9 +120,19 @@
 
 <body class="dracula">
 
-    <app-top>
-        <i class="fa-solid fa-home" slot="content"></i>
-    </app-top>
+    <script src="/scripts/menu.js"></script>
+
+    <button class=" btn" onclick="expandir()">
+        <i class="fa-solid fa-bars" slot="content"></i>
+    </button>
+
+    <div id="menu-lado" class="menu escondido">
+        <button class="btn" onclick="colapso()"><i class="fa-solid fa-x"></i></button>
+        <app-top>
+            <i class="fa-solid fa-home" slot="content"></i>
+        </app-top>
+        <app-menu></app-menu>
+    </div>
 
     <h1>Placar</h1>
 

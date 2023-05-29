@@ -252,3 +252,27 @@ input {
   background-color: #f1fa8c;
   color: #282a36;
 }
+
+.menu {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #44475a;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.menu > button {
+  margin: 0.5rem;
+}
+.menu.escondido {
+  width: 0;
+}
+@media (max-width: 600px) {
+  .menu {
+    height: auto;
+    width: 100%;
+  }
+}

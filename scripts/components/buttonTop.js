@@ -4,7 +4,7 @@ template.innerHTML = `
 @import url(/style/style.css)
 </style>
 <div class="retorno">
-<a href="/pages/menu/" name="topo"><button class="dracula btn">
+<a href="/pages/menu/" name="topo"><button class="dracula btn btn-indice">
 <slot name="content"></slot>
 </button></a>
 </div>
